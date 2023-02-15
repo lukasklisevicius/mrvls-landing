@@ -1,0 +1,283 @@
+@font-face {
+    font-family: book;
+    src: url('fonts/Mont-Book.otf');
+}
+
+@font-face {
+    font-family: heavy;
+    src: url('fonts/Mont-Heavy.otf');
+}
+
+@font-face {
+    font-family: heavy-italic;
+    src: url('fonts/Mont-HeavyItalic.otf');
+}
+
+@font-face {
+    font-family: black-italic;
+    src: url('fonts/Mont-BlackItalic.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+}
+html{
+    /* overflow-y: hidden; */
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('bg-wide.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-family: book;
+}
+
+.container{
+    padding: 10px 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    margin: 30px 0;
+    width: 70%;
+}
+
+.x{
+    display: inline-block;
+    background-image: url('x2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position-y: 2.5px;
+    width: 24px;
+}
+
+.x1{
+    display: inline-block;
+    background-image: url('x-as.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 16px;
+}
+
+.text{
+    margin-bottom:30px;
+}
+.text2{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.bold{
+    font-family: heavy;
+}
+
+.video{
+    width: auto;
+    height: fit-content;
+    height: 46vh;
+    /* min-height: 350px; */
+    /* background-color: #e4451d; */
+    z-index: 2;
+    position: static;
+}
+
+.video-box{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.video-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid white; */
+    position: relative;
+}
+
+.hash{
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    background-image: url('goyourway-hashtag.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+
+}
+
+.box{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.box1{
+    width: 60%;
+    padding: 0 10px 0 0;
+}
+
+
+.box2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+
+}
+
+a{
+    margin: 15px 0;
+    border-radius: 50px;
+    background-color: white;
+    padding: 12px;
+    text-align: center;
+    width: 50%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e4451d;
+    font-size: 24px;
+    font-family: black-italic;
+}
+
+a:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #e4451d;
+    transition: 0.2s linear;
+
+}
+
+.bold{
+    font-family: heavy;
+}
+
+.video iframe{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 14s linear infinite;
+    -moz-animation: rotating 14s linear infinite;
+    -ms-animation: rotating 14s linear infinite;
+    -o-animation: rotating 14s linear infinite;
+    animation: rotating 14s linear infinite;
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    html{
+        overflow-y: scroll;
+    }
+    body {
+      width: 100%;
+      /* padding: 5%; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('bg-narrow.jpg');
+      background-size: cover;
+    }
+    .container{
+        width: 100%;
+        max-width: 90%;
+        height: 100%;
+        /* text-align: center; */
+    }
+
+    .logo{
+        width: 60%;
+        margin: 10px 0 20px 0;
+    }
+
+    .box{
+        /* margin-top: 10px; */
+        flex-direction: column;
+    }
+    .text{
+        margin-bottom: 0;
+    }
+    .text2{
+        margin-bottom: 20px;
+    }
+    .box1, .box2{
+        width: 100%;
+    }
+    .box{
+        margin-top: 0;
+    }
+    .box1{
+        margin: 20px 0;
+    }
+    a{
+        width: 80%;
+    }
+
+    .video{
+        height: 23.5vh;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    .hash{
+    position: absolute;
+    top:-35px;
+    right: -100px;
+    z-index: 1;
+    }
+  }
+
